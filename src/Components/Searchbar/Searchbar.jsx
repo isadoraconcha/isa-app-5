@@ -3,7 +3,8 @@ import "./Searchbar.css";
 import axios from "axios";
 
 export const SearchBar = ({ onCharactersChange }) => {
-  const [searchBy, setSearchBy] = useState("name", "comic"); // You can change this to "comic"
+  const [searchBy, setSearchBy] = useState("name"); // You can change this to "comic"
+  const [searchBy, setSearchBy] = useState("comic");
   const [searching, setSearching] = useState(false);
   const [query, setQuery] = useState("");
 
@@ -11,11 +12,11 @@ export const SearchBar = ({ onCharactersChange }) => {
     setSearching(true);
     let url;
     if (searchBy === 'name') {
-      url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${query}&limit=10&apikey=c70bee055661b1eabc28f40a0fea1796`;
+      url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${query}&limit=10&apikey=c70bee055661b1eabc28f40a0fea1796&hash=1fb53ea11fb2c416560dbeccb40e01fc`;
     } else if (searchBy === 'comic') {
-      url = `https://gateway.marvel.com:443/v1/public/characters?comics=${query}&limit=10&apikey=c70bee055661b1eabc28f40a0fea1796`;
+      url = `https://gateway.marvel.com:443/v1/public/characters?comics=${query}&limit=10&apikey=c70bee055661b1eabc28f40a0fea1796&hash=1fb53ea11fb2c416560dbeccb40e01fc`;
     } else {
-      url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${query}&limit=10&apikey=c70bee055661b1eabc28f40a0fea1796`;
+      url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${query}&limit=10&apikey=c70bee055661b1eabc28f40a0fea1796&hash=1fb53ea11fb2c416560dbeccb40e01fc`;
     }
     const res = await axios(url);
     const characters = await res.data.data.results;

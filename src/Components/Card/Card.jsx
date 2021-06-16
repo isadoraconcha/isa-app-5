@@ -14,7 +14,7 @@ export const Card = ({ personaje, onStar }) => {
         </div>
       )}
       <img
-        src={`${personaje.thumbnail.path}.${personaje.thumbnail.extension}`}
+        src={`${personaje.thumbnail.path}.${personaje.thumbnail.extension}`} 
         className="card-img-top"
         style={{ width: "80%", height: "80%" }}
         alt="personajes de Marvel"
