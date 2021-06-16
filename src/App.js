@@ -55,7 +55,7 @@ function App() {
   const getRandomCharacter = useCallback(async () => {
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
     const randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)]
-    const res = await axios.get(`https://gateway.marvel.com:443/v1/public/characters?ts=1&nameStartsWith=${randomLetter}&limit=100&apikey=c70bee055661b1eabc28f40a0fea1796&hash=1fb53ea11fb2c416560dbeccb40e01fc`)
+    const res = await axios.get(`https://gateway.marvel.com:443/v1/public/characters?ts=1&nameStartsWith=${randomLetter}&limit=100&apikey=9ab3f4223305129d78c4e31277c69318&hash=1fb53ea11fb2c416560dbeccb40e01fc`)
 
     const list = res.data.data.results;
     const n = Math.floor(Math.random() * list.length)
