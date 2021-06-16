@@ -4,7 +4,6 @@ import axios from "axios";
 
 export const SearchBar = ({ onCharactersChange }) => {
   const [searchBy, setSearchBy] = useState("name"); // You can change this to "comic"
-  const [searchBy, setSearchBy] = useState("comic");
   const [searching, setSearching] = useState(false);
   const [query, setQuery] = useState("");
 
