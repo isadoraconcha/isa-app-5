@@ -1,0 +1,35 @@
+body { 
+  background-color: #f6f7f9;
+  color: lightgrey;
+  padding: 20px;
+  margin: 0px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.card {
+  width: 150px;
+  height: 225px; 
+}
+
+.card-text {
+  color: grey
+}
+
+.card-body {
+  color: grey
+}
+
+.card-img-top {
+  color: black
+}
